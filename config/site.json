@@ -1,0 +1,27 @@
+{
+  "name": "维林",
+  "title": "可你一直都胜过一切",
+  "description": "我有好多话想说，翻来覆去总是那么几句",
+  "about": "如果我也能自若的站在你面前",
+  "footer": "© 2026 维林 · All rights reserved.",
+  "navigation": [
+    {
+      "label": "首页",
+      "url": "index.html"
+    },
+    {
+      "label": "关于",
+      "url": "#about"
+    }
+  ],
+  "social": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/"
+    },
+    {
+      "label": "Email",
+      "url": "mailto:hello@example.com"
+    }
+  ]
+}
