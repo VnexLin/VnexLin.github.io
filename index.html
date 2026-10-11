@@ -10,6 +10,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Noto+Serif+SC:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/styles.css" />
+  <script>
+    // 根据 URL 的 type 参数返回指定内容（GitHub Pages 仅支持 GET）
+    (function () {
+      var type = new URLSearchParams(window.location.search).get('type');
+      if (type === 'ssnet') {
+        document.addEventListener('DOMContentLoaded', function () {
+          document.body.textContent = 'yes';
+        });
+      }
+    })();
+  </script>
 </head>
 <body>
   <header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">✦</span><span data-site="name">留白</span></a><nav id="nav" aria-label="主导航"></nav></header>
