@@ -13,12 +13,17 @@
   <script>
     // 根据 URL 的 type 参数返回指定内容（GitHub Pages 仅支持 GET）
     (function () {
-      var type = new URLSearchParams(window.location.search).get('type');
-      if (type === 'ssnet') {
-        document.addEventListener('DOMContentLoaded', function () {
-          document.body.textContent = 'yes';
-        });
-      }
+      if (new URLSearchParams(window.location.search).get('type') !== 'ssnet') return;
+      // 先隐藏页面，避免博客内容闪现
+      document.documentElement.style.visibility = 'hidden';
+      var showYes = function () {
+        // 整个文档替换为 yes，杜绝其他脚本异步重建页面
+        document.documentElement.innerHTML =
+          '<head><meta charset="UTF-8" /><title>yes</title></head><body>yes</body>';
+        document.documentElement.style.visibility = '';
+      };
+      document.addEventListener('DOMContentLoaded', showYes);
+      window.addEventListener('load', showYes);
     })();
   </script>
 </head>
